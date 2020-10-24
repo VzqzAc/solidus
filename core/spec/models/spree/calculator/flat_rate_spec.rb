@@ -46,7 +46,7 @@ RSpec.describe Spree::Calculator::FlatRate, type: :model do
     it "should compute the amount as 0 when there is no object" do
       calculator.preferred_amount = 100.0
       calculator.preferred_currency = "GBP"
-      expect(calculator.compute.round(2)).to eq(0.0)
+      expect(calculator.compute.round(2)).to eq('zero in BigDecimal')
     end
   end
 end

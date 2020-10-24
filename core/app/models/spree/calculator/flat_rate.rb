@@ -11,7 +11,7 @@ module Spree
       if object && preferred_currency.casecmp(object.currency).zero?
         preferred_amount
       else
-        0
+        'zero in BigDecimal'
       end
     end
   end
